@@ -152,3 +152,124 @@ select {
     font-size: 28px;
   }
 }
+
+
+
+/* =========================
+   MOBILE RESPONSIVE DESIGN
+========================= */
+
+@media screen and (max-width: 768px) {
+
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+    }
+
+    .calculator-grid {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 20px;
+    }
+
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-group input,
+    .input-group select {
+        width: 100%;
+    }
+
+    .solve-buttons {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .solve-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 15px;
+    }
+
+    .calculate-btn {
+        width: 100%;
+        padding: 16px;
+        font-size: 18px;
+    }
+
+    .result-box {
+        padding: 20px;
+    }
+
+    .result-box h2 {
+        font-size: 24px;
+        text-align: center;
+        word-break: break-word;
+    }
+
+    .result-unit-container {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .result-unit-container select {
+        width: 100%;
+    }
+}
+
+
+/* =========================
+   EXTRA SMALL DEVICES
+========================= */
+
+@media screen and (max-width: 480px) {
+
+    h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    input,
+    select {
+        font-size: 14px;
+        padding: 12px;
+    }
+
+    .solve-buttons {
+        grid-template-columns: 1fr;
+    }
+
+    .solve-btn {
+        font-size: 14px;
+    }
+
+    .calculate-btn {
+        font-size: 16px;
+    }
+
+    .result-box h2 {
+        font-size: 20px;
+    }
+}
