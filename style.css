@@ -1,0 +1,154 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #e0f2ff, #f8fbff);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+
+.container {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 25px;
+  padding: 40px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  font-size: 42px;
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #64748b;
+  margin-bottom: 30px;
+  font-size: 18px;
+}
+
+.formula {
+  background: linear-gradient(to right, #eff6ff, #dbeafe);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+  color: #2563eb;
+  margin-bottom: 35px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.card {
+  background: #f8fafc;
+  padding: 20px;
+  border-radius: 20px;
+  border: 1px solid #e2e8f0;
+}
+
+.card h2 {
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+.field {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+.input-group {
+  display: flex;
+  gap: 10px;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+}
+
+.solve-buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.solve-btn {
+  padding: 15px;
+  border: none;
+  border-radius: 15px;
+  background: #e2e8f0;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.solve-btn.active {
+  background: #2563eb;
+  color: white;
+}
+
+.calculate-btn {
+  width: 100%;
+  margin-top: 35px;
+  padding: 18px;
+  border: none;
+  border-radius: 18px;
+  background: #2563eb;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.result {
+  margin-top: 35px;
+  background: #ecfdf5;
+  border: 1px solid #bbf7d0;
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  display: none;
+}
+
+.result p {
+  font-size: 32px;
+  font-weight: bold;
+}
+
+@media (max-width: 700px) {
+  .solve-buttons {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .formula {
+    font-size: 28px;
+  }
+}

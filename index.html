@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>C1V1 = C2V2 Calculator</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="container">
+
+    <h1>C₁V₁ = C₂V₂ Calculator</h1>
+    <p class="subtitle">Dilution Calculator with Automatic Unit Conversion</p>
+
+    <div class="formula">
+      C₁V₁ = C₂V₂
+    </div>
+
+    <div class="grid">
+
+      <div class="card">
+        <h2>Solution Parameters</h2>
+
+        <div class="field">
+          <label>Concentration 1 (C₁)</label>
+          <div class="input-group">
+            <input type="number" id="c1" placeholder="Enter C1">
+            <select id="c1Unit">
+              <option value="1" data-unit="M">M</option>
+              <option value="0.001" data-unit="mM">mM</option>
+              <option value="0.000001" data-unit="µM">µM</option>
+              <option value="0.000000001" data-unit="nM">nM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Volume 1 (V₁)</label>
+          <div class="input-group">
+            <input type="number" id="v1" placeholder="Enter V1">
+            <select id="v1Unit">
+              <option value="1" data-unit="mL">mL</option>
+              <option value="1000" data-unit="L">L</option>
+              <option value="0.001" data-unit="µL">µL</option>
+              <option value="0.000001" data-unit="nL">nL</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>Target Parameters</h2>
+
+        <div class="field">
+          <label>Concentration 2 (C₂)</label>
+          <div class="input-group">
+            <input type="number" id="c2" placeholder="Enter C2">
+            <select id="c2Unit">
+              <option value="1" data-unit="M">M</option>
+              <option value="0.001" data-unit="mM">mM</option>
+              <option value="0.000001" data-unit="µM">µM</option>
+              <option value="0.000000001" data-unit="nM">nM</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label>Volume 2 (V₂)</label>
+          <div class="input-group">
+            <input type="number" id="v2" placeholder="Enter V2">
+            <select id="v2Unit">
+              <option value="1" data-unit="mL">mL</option>
+              <option value="1000" data-unit="L">L</option>
+              <option value="0.001" data-unit="µL">µL</option>
+              <option value="0.000001" data-unit="nL">nL</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="solve-buttons">
+      <button class="solve-btn active" onclick="setSolve('c1', this)">Solve C₁</button>
+      <button class="solve-btn" onclick="setSolve('v1', this)">Solve V₁</button>
+      <button class="solve-btn" onclick="setSolve('c2', this)">Solve C₂</button>
+      <button class="solve-btn" onclick="setSolve('v2', this)">Solve V₂</button>
+    </div>
+
+    <button class="calculate-btn" onclick="calculate()">
+      Calculate
+    </button>
+
+    <div class="result-unit-container">
+    <label>Select Result Unit</label>
+
+    <select id="resultUnit">
+    </select>
+    </div>
+
+    <div class="result" id="resultBox">
+      <h2>Calculated Result</h2>
+      <p id="resultText"></p>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
